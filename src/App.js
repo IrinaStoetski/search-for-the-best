@@ -1,25 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { fetchRepositoriesByName } from './api/index';
+// ContextProviders
+import { LayoutContext } from './contextProviders/LayoutContext';
+//Components
+import CardList from './components/CardList'
+import SearchForm from './components/SearchForm'
+//Styles
+import './styles/global-styles.scss';
 
 function App() {
+  const [repositoriesList, setRepositoriesList] = useState([]);
+  const [isLoading, setLoading] = useState(false);
+  const getRepositoriesList = async (query) => {
+    setLoading(true);
+    const list = await fetchRepositoriesByName(query);
+    setLoading(false);
+    setRepositoriesList(list);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <LayoutContext.Provider
+      value={{
+        getRepositoriesList,
+        isLoading,
+      }}
+    >
+      <SearchForm />
+      {isLoading ? '11111111111' : <CardList {...repositoriesList} />}
+    </LayoutContext.Provider>
   );
 }
 
