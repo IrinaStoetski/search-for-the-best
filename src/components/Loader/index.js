@@ -1,17 +1,8 @@
 import React from 'react';
 import './style.scss';
 
-const Spinner = () => {
-  return (
-    <div class="sk-chase">
-    <div class="sk-chase-dot"></div>
-    <div class="sk-chase-dot"></div>
-    <div class="sk-chase-dot"></div>
-    <div class="sk-chase-dot"></div>
-    <div class="sk-chase-dot"></div>
-    <div class="sk-chase-dot"></div>
-  </div>
-  );
-};
+const Loader = () => (
+  <div className="lds-dual-ring" />
+);
 
-export default Spinner;
+export default Loader;

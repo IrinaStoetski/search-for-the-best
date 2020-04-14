@@ -7,28 +7,32 @@ type Props = {
     customClass?: string,
     buttonType?: 'reset' | 'button' | 'submit',
     disabled?: boolean,
-    customStyles?: string,
     loading?: boolean,
     children?: React.Node,
     onClick?: Function,
   };
 
 const Button = ({
-    type = 'primary',
-    customClass = '',
-    buttonType='submit',
-    ...props
+  type = 'primary',
+  customClass = '',
+  buttonType = 'submit',
+  disabled,
+  onClick,
+  loading,
+  children,
 }: Props) => {
-  const componentClassName = `btn ${type} ${customClass}`
-    return (
-        <button className={componentClassName}
-          type={buttonType}
-          disabled={props.disabled}
-          onClick={props.onClick}>
-          {props.loading ? <Spinner /> : props.children}
-        </button>
-     )
-}
+  const componentClassName = `btn ${type} ${customClass}`;
+  return (
+    <button
+      className={componentClassName}
+      type={buttonType}
+      disabled={disabled}
+      onClick={onClick}
+    >
+      {loading ? <Spinner /> : children}
+    </button>
+  );
+};
 
 
-export default Button
+export default Button;

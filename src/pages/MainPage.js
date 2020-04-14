@@ -2,15 +2,16 @@ import React, { useState } from 'react';
 import { fetchRepositoriesByName } from '../api/index';
 // ContextProviders
 import { LayoutContext } from '../contextProviders/LayoutContext';
-//Components
-import CardList from '../components/CardList'
-import SearchForm from '../components/SearchForm'
+// Components
+import CardList from '../components/CardList';
+import SearchForm from '../components/SearchForm';
 import Paginator from '../components/Paginator';
-//Styles
-import './style.scss'
+import Loader from '../components/Loader';
+// Styles
+import './style.scss';
 
 
-const MainPage =  () => {
+const MainPage = () => {
   const [repositoriesInfo, setRepositoriesInfo] = useState([]);
   const [isLoading, setLoading] = useState(false);
   const [activeQuery, setActiveQuery] = useState('');
@@ -18,13 +19,12 @@ const MainPage =  () => {
 
   const getRepositoriesList = async (query, page) => {
     setLoading(true);
-    console.log(query, page);
     const list = await fetchRepositoriesByName(query, page);
-    setLoading(false);
     setRepositoriesInfo(list);
-    setActiveQuery(query)
+    setActiveQuery(query);
     setActivePage(page);
-  }
+    setLoading(false);
+  };
 
   return (
     <LayoutContext.Provider
@@ -34,19 +34,19 @@ const MainPage =  () => {
         activeQuery,
       }}
     >
-        <div className="main-page">
+      <div className="main-page">
         <h2>Wanna find some cool developers? Try in out!</h2>
-      <SearchForm />
-      {isLoading ? '11111111111' : 
-      
-       (
-       <div><CardList items={repositoriesInfo.items} />
-        <Paginator itemsCount={repositoriesInfo.total_count} activePage={activePage}/></div>     
-       )}
-    
+        <SearchForm />
+        {isLoading ? <Loader />
+          : (
+            <>
+              <CardList items={repositoriesInfo.items} />
+              <Paginator itemsCount={repositoriesInfo.total_count} activePage={activePage} />
+            </>
+          )}
       </div>
     </LayoutContext.Provider>
   );
-}
+};
 
 export default MainPage;
