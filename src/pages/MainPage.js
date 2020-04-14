@@ -5,17 +5,25 @@ import { LayoutContext } from '../contextProviders/LayoutContext';
 //Components
 import CardList from '../components/CardList'
 import SearchForm from '../components/SearchForm'
+import Paginator from '../components/Paginator';
 //Styles
 import './style.scss'
 
+
 const MainPage =  () => {
-  const [repositoriesList, setRepositoriesList] = useState([]);
+  const [repositoriesInfo, setRepositoriesInfo] = useState([]);
   const [isLoading, setLoading] = useState(false);
-  const getRepositoriesList = async (query) => {
+  const [activeQuery, setActiveQuery] = useState('');
+  const [activePage, setActivePage] = useState(1);
+
+  const getRepositoriesList = async (query, page) => {
     setLoading(true);
-    const list = await fetchRepositoriesByName(query);
+    console.log(query, page);
+    const list = await fetchRepositoriesByName(query, page);
     setLoading(false);
-    setRepositoriesList(list);
+    setRepositoriesInfo(list);
+    setActiveQuery(query)
+    setActivePage(page);
   }
 
   return (
@@ -23,12 +31,19 @@ const MainPage =  () => {
       value={{
         getRepositoriesList,
         isLoading,
+        activeQuery,
       }}
     >
         <div className="main-page">
         <h2>Wanna find some cool developers? Try in out!</h2>
       <SearchForm />
-      {isLoading ? '11111111111' : <CardList {...repositoriesList} />}
+      {isLoading ? '11111111111' : 
+      
+       (
+       <div><CardList items={repositoriesInfo.items} />
+        <Paginator itemsCount={repositoriesInfo.total_count} activePage={activePage}/></div>     
+       )}
+    
       </div>
     </LayoutContext.Provider>
   );
