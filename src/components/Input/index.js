@@ -17,7 +17,7 @@ const Input = ({
   type = 'primary',
   customClass = '',
   inputType = 'text',
-  value,
+  value = '',
   onChange,
   placeholder,
   title,

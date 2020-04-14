@@ -10,7 +10,6 @@ import Loader from '../components/Loader';
 // Styles
 import './style.scss';
 
-
 const MainPage = () => {
   const [repositoriesInfo, setRepositoriesInfo] = useState([]);
   const [isLoading, setLoading] = useState(false);
