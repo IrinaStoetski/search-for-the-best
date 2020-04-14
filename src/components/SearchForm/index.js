@@ -25,7 +25,7 @@ const SearchForm = () => {
             onSubmit={formik.handleSubmit}
         >
             <Input
-                title="Type a name"
+                title="Type a name and find your star"
                 formik={formik}
                 formikKey="userName"
                 onChange={formik.handleChange}
