@@ -5,7 +5,7 @@ import Card from '../Card';
 // Styles
 import './style.scss';
 
-const CardList = ({ items }) => (items && items.length ? (
+const CardList = ({ items, onClickHandler }) => (items && items.length ? (
   <div className="card-list">
     {items && items.map((item) => (
       <Card
@@ -13,6 +13,7 @@ const CardList = ({ items }) => (items && items.length ? (
         name={item.name}
         description={item.description}
         link={item.html_url}
+        onClick={(onClickHandler(item))}
       />
     ))}
   </div>

@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { fetchRepositoriesByName } from '../api/index';
+import { fetchRepositoriesByName } from '../../api/index';
 // ContextProviders
-import { LayoutContext } from '../contextProviders/LayoutContext';
+import { LayoutContext } from '../../contextProviders/LayoutContext';
 // Components
-import CardList from '../components/CardList';
-import SearchForm from '../components/SearchForm';
-import Paginator from '../components/Paginator';
-import Loader from '../components/Loader';
+import CardList from '../../components/CardList';
+import SearchForm from '../../components/SearchForm';
+import Paginator from '../../components/Paginator';
+import Loader from '../../components/Loader';
 // Styles
 import './style.scss';
 
@@ -15,7 +15,7 @@ const MainPage = () => {
   const [isLoading, setLoading] = useState(false);
   const [activeQuery, setActiveQuery] = useState('');
   const [activePage, setActivePage] = useState(1);
-
+ 
   const getRepositoriesList = async (query, page) => {
     setLoading(true);
     const list = await fetchRepositoriesByName(query, page);
