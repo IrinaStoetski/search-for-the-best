@@ -7,6 +7,12 @@
   overflow: hidden;
   margin: 16px 0;
 
+  @include max-width($landscape-tablet) {
+    justify-content: start;
+    max-width: 100%;
+    overflow-x: auto;
+   }
+
   li {
     display: flex;
     align-items: center;

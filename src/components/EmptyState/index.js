@@ -2,8 +2,9 @@ import React from 'react';
 // Styles
 import './style.scss';
 
-const EmptyState = () => (
+const EmptyState = ({title}) => (
   <div className="empty-state">
+    <h2>{title}</h2>
     <svg xmlns="http://www.w3.org/2000/svg" width="255" height="158">
       <g fill="none">
         <rect width="116" height="135" x="115" y="15" fill="#F9F9F9" rx="10" />

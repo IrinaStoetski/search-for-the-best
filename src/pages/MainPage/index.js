@@ -39,7 +39,7 @@ const MainPage = () => {
         {isLoading ? <Loader />
           : (
             <>
-              <CardList items={repositoriesInfo.items} />
+              <CardList items={repositoriesInfo.items} itemsCount={repositoriesInfo.total_count} />
               <Paginator itemsCount={repositoriesInfo.total_count} activePage={activePage} />
             </>
           )}

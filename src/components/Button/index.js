@@ -1,5 +1,8 @@
+// @flow
 import React from 'react';
+// Components
 import Spinner from '../Spinner';
+// Styles
 import './style.scss';
 
 type Props = {
@@ -16,9 +19,9 @@ const Button = ({
   type = 'primary',
   customClass = '',
   buttonType = 'submit',
-  disabled,
+  disabled = false,
   onClick,
-  loading,
+  loading = false,
   children,
 }: Props) => {
   const componentClassName = `btn ${type} ${customClass}`;
@@ -27,7 +30,7 @@ const Button = ({
     <button
       className={componentClassName}
       type={buttonType}
-      disabled={disabled}
+      disabled={disabled || loading}
       onClick={onClick}
     >
       {loading ? <Spinner /> : children}

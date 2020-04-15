@@ -9,6 +9,10 @@
   display: flex;
   justify-content: center;
 
+  &:disabled {
+    opacity: 0.6;
+  }
+
   &.primary {
     background-color: $primary-color;
     color: #fff;
