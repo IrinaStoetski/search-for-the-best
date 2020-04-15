@@ -1,8 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
 
-// Jest Snapshot v1, https:
-//goo.gl/fbAQLP
-exports[`renders correctly active button 1`] = `
-  <div
+exports[`Loader component renders correctly without props 1`] = `
+<div
   className="lds-dual-ring"
-  />
-  `;JestSnapshotv1,https
+/>
+`;

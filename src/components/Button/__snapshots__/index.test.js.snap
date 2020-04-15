@@ -1,9 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
 
-// Jest Snapshot v1, https:
-//goo.gl/fbAQLP
-exports[`renders correctly simple primary button without props 1`] = `
-  <button
+exports[`Button component renders correctly simple primary button with button type and onclick handler 1`] = `
+<button
   className="btn primary "
+  disabled={false}
+  onClick={[Function]}
+  type="button"
+/>
+`;
+
+exports[`Button component renders correctly simple primary button without props 1`] = `
+<button
+  className="btn primary "
+  disabled={false}
   type="submit"
-  />
-  `;JestSnapshotv1,https
+/>
+`;

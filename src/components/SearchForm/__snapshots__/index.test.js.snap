@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly SearchForm component 1`] = `
+exports[`SearchForm component renders correctly with test context provider 1`] = `
 <form
   className="search-form"
   onSubmit={[Function]}
@@ -11,12 +11,14 @@ exports[`renders correctly SearchForm component 1`] = `
       className="input primary "
       name="name"
       onChange={[Function]}
+      placeholder=""
       type="text"
       value=""
     />
   </label>
   <button
     className="btn primary "
+    disabled={false}
     type="submit"
   >
     Search

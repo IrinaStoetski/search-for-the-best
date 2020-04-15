@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly card component 1`] = `
+exports[`Card component renders correctly card component with neccessary props 1`] = `
 <div
   className="card"
 >
@@ -9,6 +9,7 @@ exports[`renders correctly card component 1`] = `
   >
     <img
       alt=""
+      src="https://img.tsn.ua/cached/1518092914/tsn-3122bdbfc8d6fcfa75d8528e9b9cd61a/thumbs/315x210/b4/b1/ada811fe61784362abc9a989cbceb1b4.jpg"
     />
   </div>
   <h3>
@@ -17,6 +18,7 @@ exports[`renders correctly card component 1`] = `
     >
       Name: 
     </span>
+    User
   </h3>
   <p>
     <span
@@ -24,12 +26,14 @@ exports[`renders correctly card component 1`] = `
     >
       Description: 
     </span>
+    Description for
   </p>
   <a
+    href="https://github.com/stylelint/stylelint"
     rel="noopener noreferrer"
     target="_blank"
   >
-    Visit owner's repository
+    Visit repository
   </a>
 </div>
 `;
