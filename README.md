@@ -6,6 +6,7 @@ Also it uses:
  - [SCSS](https://sass-lang.com/documentation) for components styling
  - [Flow](https://flow.org/) for type checking
  - [ESLint](https://eslint.org/) with [AirBnb config](https://www.npmjs.com/package/eslint-config-airbnb)
+ - [Stylelint](https://stylelint.io/)
 
 ## Available Scripts
 
@@ -35,4 +36,4 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Checks all of the components, where flow was set up and check it for correct types
 
 ### `npm run lint`
-Checks all components from `src` folder using EsLint
+Checks all components from `src` folder using EsLint and Stylelint

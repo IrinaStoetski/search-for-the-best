@@ -11,7 +11,7 @@ type Props = {
   itemsCount: number,
 }
 const CardList = ({
-  items = [],
+  items,
   itemsCount,
 }: Props) => (
   <>
