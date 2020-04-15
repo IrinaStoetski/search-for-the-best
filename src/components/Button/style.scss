@@ -1,18 +1,18 @@
 @import '../../styles/shared/style.scss';
 
 .btn {
-    border-radius: 16px;
-    font-size: 16px;
-    padding: 8px;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
+  border-radius: 16px;
+  font-size: 16px;
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
 
-    &.primary {
-        background-color: $primary-color;
-        color: #fff;
-        min-width: 80px;
-        min-height: 36px;
-    }
+  &.primary {
+    background-color: $primary-color;
+    color: #fff;
+    min-width: 80px;
+    min-height: 36px;
+  }
 }

@@ -1,12 +1,12 @@
 .search {
-    &-form {
-        display: flex;
-        align-items: flex-end;
-        padding: 16px;
-        width: 30vw;
+  &-form {
+    display: flex;
+    align-items: flex-end;
+    padding: 16px;
+    width: 30vw;
 
-        .btn {
-            margin-left: 8px;
-        }
+    .btn {
+      margin-left: 8px;
     }
+  }
 }

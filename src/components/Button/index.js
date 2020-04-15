@@ -23,6 +23,7 @@ const Button = ({
 }: Props) => {
   const componentClassName = `btn ${type} ${customClass}`;
   return (
+    // eslint-disable-next-line react/button-has-type
     <button
       className={componentClassName}
       type={buttonType}

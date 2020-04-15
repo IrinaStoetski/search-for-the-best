@@ -13,10 +13,10 @@ const SearchForm = () => {
   const { isLoading, getRepositoriesList } = layoutContextData;
   const formik = useFormik({
     initialValues: {
-      userName: '',
+      name: '',
     },
     onSubmit: (values) => {
-      getRepositoriesList(values.userName);
+      getRepositoriesList(values.name);
     },
   });
   return (
@@ -27,9 +27,9 @@ const SearchForm = () => {
       <Input
         title="Type a name and find your star"
         formik={formik}
-        formikKey="userName"
+        formikKey="name"
         onChange={formik.handleChange}
-        value={formik.values.firstName}
+        value={formik.values.name}
       />
       <Button
         buttonType="submit"

@@ -15,7 +15,7 @@ const MainPage = () => {
   const [isLoading, setLoading] = useState(false);
   const [activeQuery, setActiveQuery] = useState('');
   const [activePage, setActivePage] = useState(1);
- 
+
   const getRepositoriesList = async (query, page) => {
     setLoading(true);
     const list = await fetchRepositoriesByName(query, page);

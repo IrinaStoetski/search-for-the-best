@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly SearchForm component 1`] = `
+<form
+  className="search-form"
+  onSubmit={[Function]}
+>
+  <label>
+    Type a name and find your star
+    <input
+      className="input primary "
+      name="name"
+      onChange={[Function]}
+      type="text"
+      value=""
+    />
+  </label>
+  <button
+    className="btn primary "
+    type="submit"
+  >
+    Search
+  </button>
+</form>
+`;

@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly card component 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="card-image"
+  >
+    <img
+      alt=""
+    />
+  </div>
+  <h3>
+    <span
+      className="card-title"
+    >
+      Name: 
+    </span>
+  </h3>
+  <p>
+    <span
+      className="card-title"
+    >
+      Description: 
+    </span>
+  </p>
+  <a
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    Visit owner's repository
+  </a>
+</div>
+`;

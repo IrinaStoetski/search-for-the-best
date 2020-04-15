@@ -1,37 +1,37 @@
 @import '../../styles/shared/style.scss';
 
 .pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 16px 0;
+
+  li {
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
-    margin: 16px 0;
+    padding: 8px 12px;
+    margin-right: 16px;
+    border-radius: 4px;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    border: 1px solid $primary-color;
 
-    li {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 8px 12px;
-        margin-right: 16px;
-        border-radius: 4px;
-        width: 36px;
-        height: 36px;
-        cursor: pointer;
-        border: 1px solid $primary-color;
-
-        a {
-            color: $primary-color;
-            font-size: 16px;
-            text-decoration: none;
-        }
-
-        &.active {
-            border: 1px solid transparent;
-            background-color: $primary-color;
-
-            a {
-                color: #fff;
-            }
-        }
+    a {
+      color: $primary-color;
+      font-size: 16px;
+      text-decoration: none;
     }
+
+    &.active {
+      border: 1px solid transparent;
+      background-color: $primary-color;
+
+      a {
+        color: #fff;
+      }
+    }
+  }
 }
