@@ -1,12 +1,20 @@
+// @flow
 import React, { useContext } from 'react';
-// ContextProviders
-import Pagination from 'react-js-pagination';
-import { LayoutContext } from '../../contextProviders/LayoutContext';
 // Components
+import Pagination from 'react-js-pagination';
+// ContextProviders
+import { LayoutContext } from '../../contextProviders/LayoutContext';
 // Styles
 import './style.scss';
 
-const Paginator = ({ itemsCount, activePage }) => {
+type Props = {
+  itemsCount: number,
+  activePage: number,
+}
+const Paginator = ({
+  itemsCount,
+  activePage,
+}: Props) => {
   const layoutContextData = useContext(LayoutContext);
   const { activeQuery, getRepositoriesList } = layoutContextData;
 
@@ -19,7 +27,7 @@ const Paginator = ({ itemsCount, activePage }) => {
   return totalItemsCount > 1 && (
   <Pagination
     activePage={activePage}
-    totalItemsCount={itemsCount / 30}
+    totalItemsCount={totalItemsCount}
     pageRangeDisplayed={10}
     onChange={handlePageChange}
     hideDisabled

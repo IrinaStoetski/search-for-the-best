@@ -1,7 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
 
+// Jest Snapshot v1, https:
+//goo.gl/fbAQLP
 exports[`renders correctly active button 1`] = `
-<div
+  <div
   className="lds-dual-ring"
-/>
-`;
+  />
+  `;JestSnapshotv1,https

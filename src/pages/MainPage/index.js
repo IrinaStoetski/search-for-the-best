@@ -1,3 +1,4 @@
+// @flow
 import React, { useState } from 'react';
 import { fetchRepositoriesByName } from '../../api/index';
 // ContextProviders
@@ -11,7 +12,7 @@ import Loader from '../../components/Loader';
 import './style.scss';
 
 const MainPage = () => {
-  const [repositoriesInfo, setRepositoriesInfo] = useState([]);
+  const [repositoriesInfo, setRepositoriesInfo] = useState({});
   const [isLoading, setLoading] = useState(false);
   const [activeQuery, setActiveQuery] = useState('');
   const [activePage, setActivePage] = useState(1);

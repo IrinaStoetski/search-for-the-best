@@ -1,33 +1,33 @@
 @import '../../styles/shared/style.scss';
 
 .card-list {
-  width: 70vw;
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
   grid-gap: 24px;
+  grid-template-columns: 25% 25% 25% 25%;
+  width: 70vw;
 
   @include max-width($landscape-tablet-big) {
     display: block;
     width: 100%;
+
     .card {
       width: 100%;
       margin-top: 16px;
     }
- }
+  }
 
- @include desktop-small {
-  grid-template-columns: 33% 33% 33%;
- }
+  @include desktop-small {
+    grid-template-columns: 33% 33% 33%;
+  }
 
-   @include tablet{
-    width: 100%;
+  @include tablet {
     display: grid;
     grid-template-columns: 45% 45%;
     justify-content: center;
+    width: 100%;
 
     .card {
       width: 100%;
     }
   }
-
 }

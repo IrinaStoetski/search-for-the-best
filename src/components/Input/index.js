@@ -1,28 +1,34 @@
+// @flow
 import React from 'react';
+// Styles
 import './style.scss';
 
 type Props = {
-    type?: 'primary',
-    customClass?: String,
-    inputType?: String,
-    value: String,
+    formik: Object,
+    formikKey: string,
+    value: string,
     onChange: Function,
-    placeholder: String,
-    title?: String,
+    type?: string,
+    customClass?: string,
+    inputType?: string,
+    placeholder?: string,
+    title?: string,
+
 };
 
 const Input = ({
   formik,
   formikKey,
+  value,
+  onChange,
   type = 'primary',
   customClass = '',
   inputType = 'text',
-  value,
-  onChange,
-  placeholder,
+  placeholder = '',
   title,
 }: Props) => {
   const componentClassName = `input ${type} ${customClass}`;
+
   return (
     <label>
       {title}
@@ -35,7 +41,7 @@ const Input = ({
         name={formikKey}
       />
       {formik.touched[formikKey] && formik.errors[formikKey] ? (
-        <div className="c-error">{formik.errors[formikKey]}</div>
+        <div>{formik.errors[formikKey]}</div>
       ) : null}
     </label>
   );

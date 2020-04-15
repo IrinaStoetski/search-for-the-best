@@ -84,13 +84,13 @@ time,
 mark,
 audio,
 video {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  border: 0;
   font: inherit;
   font-size: 100%;
   vertical-align: baseline;
-  box-sizing: border-box;
+  border: 0;
 }
 
 /* HTML5 display-role reset for older browsers */

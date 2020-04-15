@@ -4,29 +4,30 @@
   &-form {
     display: flex;
     align-items: flex-end;
-    padding: 16px;
     width: 35vw;
+    padding: 16px;
 
-    @include mobile{
-       width: 100%;
-       flex-direction: column;
-       align-items: center;
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
     }
 
-    @include tablet{
+    @include tablet {
       width: 70vw;
     }
- 
+
     .btn {
       margin-left: 8px;
 
-      @include max-width($landscape-tablet-big){
+      @include max-width($landscape-tablet-big) {
         width: 50%;
         margin-top: 16px;
-     }
-      @include tablet{
+      }
+
+      @include tablet {
         width: 70%;
-     }
+      }
     }
   }
 }

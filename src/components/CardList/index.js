@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 // Components
 import EmptyState from '../EmptyState';
@@ -5,7 +6,14 @@ import Card from '../Card';
 // Styles
 import './style.scss';
 
-const CardList = ({ items, itemsCount }) => (
+type Props = {
+  items: Array<Object>,
+  itemsCount: number,
+}
+const CardList = ({
+  items = [],
+  itemsCount,
+}: Props) => (
   <>
     {items && items.length !== 0 && (
     <div className="card-list">

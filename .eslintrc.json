@@ -12,6 +12,12 @@
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
         "react/prop-types": 0,
         "react/require-default-props": 0,
-        "jsx-a11y/label-has-associated-control": "off"
+        "jsx-a11y/label-has-associated-control": "off",
+        "react/jsx-props-no-spreading": [0, {
+            "html": "ignore",
+            "custom": "ignore",
+            "explicitSpread": "ignore",
+            "exceptions": []
+        }]
     }
 }

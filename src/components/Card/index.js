@@ -1,12 +1,21 @@
+// @flow
 import React from 'react';
+// Styles
 import './style.scss';
+
+type Props = {
+  avatar: String,
+  name: String,
+  description: String,
+  link: String,
+}
 
 const Card = ({
   avatar,
   name,
   description,
   link,
-}) => (
+}: Props) => (
 
   <div className="card">
     <div className="card-image">
@@ -24,9 +33,14 @@ const Card = ({
       </span>
       {description}
     </p>
-    <a href={link} target="_blank" rel="noopener noreferrer">Visit owner&apos;s repository</a>
+    <a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Visit repository
+    </a>
   </div>
-
 );
 
 export default Card;

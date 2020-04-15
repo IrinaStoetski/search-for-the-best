@@ -3,9 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1",
     "formik": "^2.1.4",
     "node-sass": "^4.13.1",
     "react": "^16.13.1",
@@ -20,7 +17,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "flow": "flow",
-    "lint": "eslint ./src --fix && stylelint ./src --fix"
+    "lint": "eslint ./src --fix && stylelint src/**/*.scss --fix"
   },
   "browserslist": {
     "production": [
@@ -35,6 +32,9 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
@@ -45,6 +45,9 @@
     "eslint-plugin-react-hooks": "^2.5.1",
     "flow-bin": "^0.122.0",
     "react-test-renderer": "^16.13.1",
-    "stylelint-config-standard-scss": "^1.1.0"
+    "stylelint": "^13.3.2",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard-scss": "^1.1.0",
+    "stylelint-order": "^4.0.0"
   }
 }

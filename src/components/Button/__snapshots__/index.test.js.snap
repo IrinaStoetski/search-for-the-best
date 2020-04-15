@@ -1,8 +1,9 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
 
+// Jest Snapshot v1, https:
+//goo.gl/fbAQLP
 exports[`renders correctly simple primary button without props 1`] = `
-<button
+  <button
   className="btn primary "
   type="submit"
-/>
-`;
+  />
+  `;JestSnapshotv1,https

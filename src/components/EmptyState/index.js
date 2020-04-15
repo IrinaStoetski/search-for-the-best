@@ -1,8 +1,13 @@
+// @flow
 import React from 'react';
 // Styles
 import './style.scss';
 
-const EmptyState = ({title}) => (
+type Props = {
+  title?: string,
+}
+
+const EmptyState = ({ title = '' }: Props) => (
   <div className="empty-state">
     <h2>{title}</h2>
     <svg xmlns="http://www.w3.org/2000/svg" width="255" height="158">
@@ -45,6 +50,5 @@ const EmptyState = ({title}) => (
     </svg>
   </div>
 );
-
 
 export default EmptyState;

@@ -7,15 +7,15 @@
 }
 
 .lds-dual-ring::after {
-  content: " ";
   display: block;
   width: 64px;
   height: 64px;
   margin: 8px;
-  border-radius: 50%;
   border: 6px solid $primary-color;
   border-color: $primary-color transparent $primary-color transparent;
+  border-radius: 50%;
   animation: lds-dual-ring 1.2s linear infinite;
+  content: " ";
 }
 
 @keyframes lds-dual-ring {

@@ -1,4 +1,6 @@
+// @flow
 import React from 'react';
+// Styles
 import './style.scss';
 
 const Loader = () => (
