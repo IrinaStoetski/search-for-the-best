@@ -45,7 +45,7 @@
     "eslint-plugin-react-hooks": "^2.5.1",
     "flow-bin": "^0.122.0",
     "react-test-renderer": "^16.13.1",
-    "stylelint": "^13.3.2",
+    "stylelint": "^15.10.1",
     "stylelint-config-rational-order": "^0.1.2",
     "stylelint-config-standard-scss": "^1.1.0",
     "stylelint-order": "^4.0.0"
